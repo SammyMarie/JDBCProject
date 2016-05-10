@@ -5,7 +5,7 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import static java.lang.System.*;
-import uk.co.sammy.utilities.DBConnector;
+import uk.co.sammy.utilities.DBException;
 import uk.co.sammy.mainClass.ConnectionManager;
 
 public class TradeManager {
@@ -44,7 +44,7 @@ public class TradeManager {
 			
 		} catch (SQLException se) {
 
-			DBConnector.processException(se);
+			DBException.processException(se);
 		}finally{
 			if(rs != null)
 				rs.close();
@@ -81,7 +81,7 @@ public class TradeManager {
 			}
 		} catch (SQLException se) {
 
-			DBConnector.processException(se);
+			DBException.processException(se);
 			return null;
 		}finally{
 			if(rs != null)

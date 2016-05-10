@@ -8,22 +8,6 @@ import static java.lang.System.*;
 
 public class DBException {
 
-//	private static final String USERNAME = "dbuser";
-//	private static final String PASSWORD = "db";
-//	private static final String M_CONN_STRING = "jdbc:mysql://localhost/Trades";
-//
-//	public static Connection getConnection(DBType dbType) throws SQLException{
-//
-//		switch (dbType) {
-//
-//			case MYSQL:
-//				return DriverManager.getConnection(M_CONN_STRING, USERNAME, PASSWORD);
-//
-//			default:
-//				return null;
-//		}
-//	}
-
 	public static void processException(SQLException sql){
 
 		err.println("Error Message: " + sql.getMessage());
